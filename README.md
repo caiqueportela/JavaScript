@@ -10,6 +10,12 @@ Posso ainda não ter concluido a todos.
 ### Cursos
 
 - [ ] [JavaScript: primeiros passos com a linguagem](https://cursos.alura.com.br/course/javascript-introducao) - [Código](https://github.com/caiqueportela/JavaScript/tree/master/cursos/001)
+- [ ] [JavaScript: introdução a Orientação a Objetos](https://cursos.alura.com.br/course/javascritpt-orientacao-objetos)
+- [ ] [JavaScript: Interfaces e Herança em Orientação a Objetos](https://cursos.alura.com.br/course/javascript-polimorfismo)
+- [ ] [JavaScript avançado I: ES6, orientação a objetos e padrões de projetos](https://cursos.alura.com.br/course/javascript-es6-orientacao-a-objetos-parte-1)
+- [ ] [JavaScript Avançado II: ES6, orientação a objetos e padrões de projetos](https://cursos.alura.com.br/course/javascript-es6-orientacao-a-objetos-parte-2)
+- [ ] [JavaScript Avançado III: ES6, orientação a objetos e padrões de projetos](https://cursos.alura.com.br/course/javascript-es6-orientacao-a-objetos-parte-3)
+- [ ] [EcmaScript 8 e 9: Novas formas de escrever em Javascript](https://cursos.alura.com.br/course/ecmascript-novidades)
 
 ### Vídeos
 
