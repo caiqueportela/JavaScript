@@ -9,7 +9,7 @@ Posso ainda não ter concluido a todos.
 
 ### Cursos
 
-- [ ] [JavaScript: primeiros passos com a linguagem](https://cursos.alura.com.br/course/javascript-introducao)
+- [ ] [JavaScript: primeiros passos com a linguagem](https://cursos.alura.com.br/course/javascript-introducao) - [Código](https://github.com/caiqueportela/JavaScript/tree/master/cursos/001)
 
 ### Vídeos
 
@@ -21,4 +21,4 @@ Posso ainda não ter concluido a todos.
 
 Todo conteúdo que anotei referente a como trabalhar com a linguagem.
 
-<a href="https://github.com/caiqueportela/JavaScript/blob/master/ANOTACOES.md" target="_blank">Anotações de JS</a>
+[Anotações de JS](https://github.com/caiqueportela/JavaScript/blob/master/ANOTACOES.md)
