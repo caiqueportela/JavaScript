@@ -21,4 +21,4 @@ Posso ainda não ter concluido a todos.
 
 Todo conteúdo que anotei referente a como trabalhar com a linguagem.
 
-[Anotações de JS](https://github.com/caiqueportela/JavaScript/blob/master/ANOTACOES.md)
+<a href="https://github.com/caiqueportela/JavaScript/blob/master/ANOTACOES.md" target="_blank">Anotações de JS</a>
