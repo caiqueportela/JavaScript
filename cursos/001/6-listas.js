@@ -1,17 +1,17 @@
 console.log('Trabalhando com listas');
 
-const listadeDestinos = new Array(
+const listaDeDestinos = new Array(
     'Salvador',
     'São Paulo',
     'Rio de Janeiro',
 );
 
-listadeDestinos.push('Curitiba');
+listaDeDestinos.push('Curitiba');
 
 console.log('Destinos possíveis:');
-console.log(listadeDestinos);
+console.log(listaDeDestinos);
 
-listadeDestinos.splice(2, 1);
-console.log(listadeDestinos);
+listaDeDestinos.splice(2, 1);
+console.log(listaDeDestinos);
 
-console.log(listadeDestinos[0], listadeDestinos[2]);
+console.log(listaDeDestinos[0], listaDeDestinos[2]);
