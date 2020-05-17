@@ -306,6 +306,83 @@ console.log(Nome.instancias);
 ```
 Nesse caso, contamos quantos vezes essa classe foi instanciada.
 
+Uma classe poso extender propriedades e atributos de outra:
+```javascript
+class Conta {
+
+}
+
+class ContaCorrente extends Conta {
+
+}
+```
+Assim, a classe **ContaCorrente** poderá ter tudo que a classe **Conta** possui, e adicionar novos comportamentos e atributos.
+
+Para chamar um comportamente da classe que você extendeu:
+```javascript
+class Conta {
+
+    constructor(saldo) {
+        this._saldo = saldo;
+    }
+
+}
+
+class ContaCorrente extends Conta {
+
+    constructor(saldo) {
+        super(saldo);
+    }
+
+}
+```
+
+Declarar uma classe abstrata
+```javascript
+class Conta {
+
+    constructor(saldo) {
+        if (this.constructor === Conta) {
+            throw new Error('Classe abstrata');
+        }
+        this._saldo = saldo;
+    }
+
+}
+
+class ContaCorrente extends Conta {
+
+    constructor(saldo) {
+        super(saldo);
+    }
+
+}
+```
+JS não possui isso nativamente. Utiliza-se as exceções para isso.
+
+Declarar um método abstrat0
+```javascript
+class Conta {
+
+    constructor(saldo) {
+        this._saldo = saldo;
+    }
+
+    sacar(valor) {
+        throw new Error('Método abstrato');
+    }
+
+}
+
+class ContaCorrente extends Conta {
+
+    constructor(saldo) {
+        super(saldo);
+    }
+
+}
+```
+
 ## Funções nativas
 
 Converter texto em número inteiro:
