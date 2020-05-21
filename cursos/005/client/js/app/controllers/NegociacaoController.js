@@ -6,26 +6,48 @@ class NegociacaoController {
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
-        
-        this._listaNegociacoes = new ListaNegociacoes();
-        this._negociacoesView = new NegociacoesView($('#negociacoesView'));
-        this._mensagem = new Mensagem();
-        this._mensagemView = new MensagemView($('#mensagemView'))
 
-        this._negociacoesView.update(this._listaNegociacoes);
-        this._mensagemView.update(this._mensagem);
+        this._listaNegociacoes = new Bind(new ListaNegociacoes(), new NegociacoesView($('#negociacoesView')), 'adiciona', 'esvazia', 'ordena', 'inverteOrdem');
+
+        this._mensagem = new Bind(new Mensagem(), new MensagemView($('#mensagemView')), 'texto');
+
+        this._ordemAtual = '';
     }
 
     adiciona(event) {
         event.preventDefault();
 
         this._listaNegociacoes.adiciona(this._criaNegociacao());
-        this._negociacoesView.update(this._listaNegociacoes);
-
+        
         this._mensagem.texto = 'Negociação adicionada com sucesso!';
-        this._mensagemView.update(this._mensagem);
 
         this._limpaFormulario();
+    }
+
+    limpa() {
+        this._listaNegociacoes.esvazia();
+
+        this._mensagem.texto = 'Negociações apagadas com sucesso!';
+    }
+
+    importa() {
+        const service = new NegociacaoService();
+
+        service.obterNegociacoes()
+            .then(negociacoes => {
+                negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao));
+                this._mensagem.texto = 'Negociações importadas com sucesso!';
+            })
+            .catch(erro => this._mensagem.texto = erro);
+    }
+
+    ordena(coluna) {
+        if(this._ordemAtual === coluna) {
+            this._listaNegociacoes.inverteOrdem();
+        } else {
+            this._listaNegociacoes.ordena((a, b) => a[coluna] - b[coluna]);
+        }
+        this._ordemAtual = coluna;
     }
 
     _criaNegociacao() {

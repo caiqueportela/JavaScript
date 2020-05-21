@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Funcionario {
+
+            constructor(email) {
+                this._email = email;
+            }
+
+            get email() {
+                return this._email;
+            }
+
+            set email(email) {
+                this._email = email;
+            }
+        }
+
+        const funcionarioProxy = new Proxy(new Funcionario('abc@email.com'), {
+            set(target, prop, value, receiver) {
+                console.log(`Alterando '${prop}'`);
+                console.log(`Antigo valor: '${target[prop]}' | Novo valor: '${value}'`);
+                
+                return Reflect.set(target, prop, value, receiver);
+            }
+        });
+
+        funcionarioProxy.email = 'caique@gmail.com';
+
+        console.log(funcionarioProxy.email);
+    </script>
+</body>
+</html>
